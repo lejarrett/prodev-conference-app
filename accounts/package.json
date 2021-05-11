@@ -1,7 +1,7 @@
 {
-  "name": "prodev-conference-app-backend",
+  "name": "prodev-conference-app-accounts",
   "version": "1.0.0",
-  "description": "The backend for the Professional Development Conference App.",
+  "description": "The accounts microservice for the Professional Development Conference App.",
   "main": "src/server.mjs",
   "scripts": {
     "dev": "nodemon src/server.mjs",
@@ -25,8 +25,6 @@
     "koa-body": "^4.2.0",
     "node-input-validator": "^4.3.3",
     "pg": "^8.5.1",
-    "qrcode": "^1.4.4",
-    "swagger-parser": "^10.0.2",
-    "swagger-ui-dist": "^3.41.1"
+    "qrcode": "^1.4.4"
   }
 }

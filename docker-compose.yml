@@ -23,8 +23,8 @@ services:
       dockerfile: Dockerfile
     depends_on: 
       - postgres
-      ports:
-        - "8080:80"
+    ports:
+      - "8080:80"
     environment:
       PORT: 80
       JWT_SECRET: secret
@@ -46,8 +46,8 @@ services:
       dockerfile: Dockerfile
     depends_on: 
       - backend
-      ports:
-        - "8081:80"
+    ports:
+      - "8081:80"
     environment:
       PORT: 80
       JWT_SECRET: secret

@@ -2,11 +2,13 @@
 import React, { useContext, useState } from "react";
 import jwtDecode from "jwt-decode";
 import http from "./httpService";
-import { apiUrl } from './httpService';
+// import { apiUrl } from './httpService';
 import { Redirect } from "react-router-dom";
 
-const apiEndpointSession = apiUrl + "/session";
-const apiEndpointRegister = apiUrl + "/accounts";
+const apiEndpointSession = "/api/session";
+const apiEndpointRegister = "/api/accounts";
+// const apiEndpointSession = apiUrl + "/session";
+// const apiEndpointRegister = apiUrl + "/accounts";
 const tokenKey = "token";
 
 http.setJwt(getJwt());

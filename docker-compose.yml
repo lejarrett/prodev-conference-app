@@ -15,6 +15,7 @@ services:
     # it starts
     depends_on: 
       - accounts
+      - backend
     ports:
       - "3000:80"
   backend:
@@ -22,7 +23,7 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     depends_on: 
-      - postgres
+      - accounts
     ports:
       - "8080:80"
     environment:
@@ -45,7 +46,7 @@ services:
       context: ./accounts
       dockerfile: Dockerfile
     depends_on: 
-      - backend
+      - postgres
     ports:
       - "8081:80"
     environment:

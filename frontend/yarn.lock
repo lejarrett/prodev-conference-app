@@ -7829,6 +7829,11 @@
   dependencies:
     "is-wsl" "^1.1.0"
 
+"opossum@^6.0.1":
+  "integrity" "sha512-mE+ftebLjHQ2Vrl2SKTujcmm50r3PgDRDUQAbPUpLsudzGdTQW5qvf8FlZjp1wb+mgPzeypkmZtKSYzrR4lIAg=="
+  "resolved" "https://registry.npmjs.org/opossum/-/opossum-6.0.1.tgz"
+  "version" "6.0.1"
+
 "optimize-css-assets-webpack-plugin@5.0.4":
   "integrity" "sha512-wqd6FdI2a5/FdoiCNNkEvLeA//lHHfG24Ln2Xm2qqdIk4aOlsR18jwpyOihqQ8849W3qu2DX8fOYxpvTMj+93A=="
   "resolved" "https://registry.npmjs.org/optimize-css-assets-webpack-plugin/-/optimize-css-assets-webpack-plugin-5.0.4.tgz"

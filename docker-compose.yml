@@ -10,9 +10,9 @@ services:
         # on the local computer to 80 in the running
         # container.
         # REACT_APP_API_URL: http://localhost:8080/api
-    # This depends on backend because Nginx will stop if
-    # it can't find the DNS entry named "backend" when
-    # it starts
+        # This depends on backend because Nginx will stop if
+        # it can't find the DNS entry named "backend" when
+        # it starts
     depends_on: 
       - accounts
       - backend

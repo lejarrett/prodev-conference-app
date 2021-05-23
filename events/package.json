@@ -1,7 +1,7 @@
 {
-  "name": "prodev-conference-app-backend",
+  "name": "prodev-conference-app-events",
   "version": "1.0.0",
-  "description": "The backend for the Professional Development Conference App.",
+  "description": "The events microservice for the Professional Development Conference App.",
   "main": "src/server.mjs",
   "scripts": {
     "dev": "nodemon src/server.mjs",

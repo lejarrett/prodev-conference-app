@@ -54,7 +54,7 @@ services:
       context: ./events
       dockerfile: Dockerfile
     depends_on: 
-      - backend
+      - postgres
     ports:
       - "8082:80"
     # environment:

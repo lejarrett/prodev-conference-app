@@ -30,7 +30,7 @@ const LoginForm = props => {
     errorThresholdPercentage: 50,
     resetTimeout: 5000,
   });
-
+  
   useEffect(() => {
     const tmpCircuit = new opossum(
       () => axios.get(route),

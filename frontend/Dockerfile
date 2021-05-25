@@ -25,6 +25,8 @@ WORKDIR /usr/share/nginx/html
 COPY frontend.nginx.conf /etc/nginx/conf.d/default.conf
 # Copy the output of the build from the last image into
 # this one
+EXPOSE 80
+
 COPY --from=0 /usr/src/app/build .
 # The Nginx docker image will start on its own, so no need
 # for a CMD statement, here.

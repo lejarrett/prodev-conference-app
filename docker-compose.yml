@@ -16,6 +16,7 @@ services:
     depends_on: 
       - accounts
       - backend
+      - events
     ports:
       - "3000:80"
   backend:
@@ -23,7 +24,7 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     depends_on: 
-      - accounts
+      - postgres
     ports:
       - "8080:80"
     environment:
@@ -49,6 +50,20 @@ services:
       - postgres
     ports:
       - "8081:80"
+    environment:
+      PORT: 80
+      JWT_SECRET: secret
+      PGHOST: postgres
+      PGPORT: 5432
+      PGAPPNAME: Conference GO!
+      
+      # See the Dockerfile for the backend to understand
+      # how the WAIT_HOSTS values are used
+      WAIT_HOSTS: postgres:5432
+
+      PGDATABASE: conference_app 
+      PGUSER: conference_app_user
+      PGPASSWORD: 5UvUwY3xRH86xXhx
   events:
     build:
       context: ./events
@@ -57,21 +72,21 @@ services:
       - postgres
     ports:
       - "8082:80"
-    # environment:
-    #   PORT: 80
-    #   JWT_SECRET: secret
-    #   PGHOST: postgres
-    #   PGPORT: 5432
-    #   PGAPPNAME: Conference GO!
+    environment:
+      PORT: 80
+      JWT_SECRET: secret
+      PGHOST: postgres
+      PGPORT: 5432
+      PGAPPNAME: Conference GO!
 
-    #   # See the Dockerfile for the backend to understand
-    #   # how the WAIT_HOSTS values are used
-    #   WAIT_HOSTS: postgres:5432
+      # See the Dockerfile for the backend to understand
+      # how the WAIT_HOSTS values are used
+      WAIT_HOSTS: postgres:5432
 
-    #   # Thes values are the same as below
-    #   PGDATABASE: conference_app 
-    #   PGUSER: conference_app_user
-    #   PGPASSWORD: 5UvUwY3xRH86xXhx
+      # Thes values are the same as below
+      PGDATABASE: conference_app 
+      PGUSER: conference_app_user
+      PGPASSWORD: 5UvUwY3xRH86xXhx
   postgres:
     image: postgres:13
     environment:

@@ -89,7 +89,7 @@ services:
       PGPASSWORD: 5UvUwY3xRH86xXhx
   locations:
     build:
-      context: ./events
+      context: ./locations
       dockerfile: Dockerfile
     depends_on: 
       - postgres
